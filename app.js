@@ -1,30 +1,28 @@
 // Busquemos el formulario en el DOM
-let formElement = // Utiliza el método querySelector()
+const btnAbrirPopup = document.querySelector("#btn-abrir-popup");
+const overlay = document.querySelector("#overlay");
+const Popup = document.querySelector("#popup");
+const btnCerrarPopup = document.querySelector("#btn-cerrar-popup");
 
-// Lo siguiente es el manipulador (handler) de entrega de formularios, aunque
-// no se enviará en ningún sitio todavía
+btnAbrirPopup.addEventListener("click", function () {
+  overlay.classList.add("active");
+  Popup.classList.add("active");
+});
 
-// Observa que el nombre de la función comienza con un verbo
-// y describe exactamente lo que hace la función
-function handleProfileFormSubmit(evt) {
-    // Esta línea impide que el navegador
-    // entregue el formulario en su forma predeterminada.
-    evt.preventDefault();
-    // Una vez hecho esto, podemos definir nuestra propia forma de entregar el formulario.
-    // Lo explicaremos todo con más detalle después.
+btnCerrarPopup.addEventListener("click", function () {
+  overlay.classList.remove("active");
+  Popup.classList.remove("active");
+});
 
-    // Busquemos los campos del formulario en el DOM
-    let nameInput = // Utiliza el método querySelector()
-    let jobInput = // Utiliza el método querySelector()
+const EditarPerfil = document.forms["registrer"];
+const inputNombre = EditarPerfil.elements["name"];
+const inputCharacteristic = EditarPerfil.elements["about"];
+const h2Person = document.getElementById("profile__name");
+const pDescription = document.querySelector(".profile_description");
 
-    // Obtén los valores de cada campo desde la propiedad de valor correspondiente
+EditarPerfil.addEventListener("submit", function (event) {
+  event.preventDefaul();
 
-    // Selecciona los elementos donde se introducirán los valores de los campos
-
-    // Inserta nuevos valores utilizando el textContent
-    // propiedad del método querySelector()
-}
-
-// Conecta el manipulador (handler) al formulario:
-// se observará el evento de entrega
-formElement.addEventListener('submit', handleProfileFormSubmit);
+  const nuevoNombre = inputNombre.value.trim();
+  const nuevaCaracteristica = inputCharacteristic.value.trim();
+});

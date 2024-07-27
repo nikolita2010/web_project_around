@@ -8,10 +8,6 @@
     <meta name="descrption" content="Lugares de exploracion" />
     <title>Around the U.S</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <script
-      src="https://kit.fontawesome.com/5a9232ba50.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div class="page">
@@ -24,21 +20,26 @@
         <img src="./niko.jpeg" alt="foto de una mujer" class="profile__image" />
         <div class="profile__info">
           <div class="profile__chance">
-            <h2 class="profile__name">Jacques Cousteau</h2>
-            <button class="profile__button-edit" id="edit"></button>
+            <h2 class="profile__name" id="profile__name">Jacques Cousteau</h2>
+            <button class="profile__button-edit" id="btn-abrir-popup"></button>
           </div>
           <p class="profile__description">Explorador</p>
         </div>
         <button class="profile__button-add">+</button>
       </div>
-      <div class="overlay">
+      <div class="overlay" id="overlay">
         <button id="btn-cerrar-popup" class="btn-cerrar-popup">x</button>
-        <div class="popup">
+        <div class="popup" edit="popup">
           <h3>Editar perfil</h3>
-          <form class="popup__container">
+          <form class="popup__container" id="registrer">
             <div class="contenedor-inputs">
-              <input type="text" placeholder="Nombre" />
-              <input type="text" placeholder="Acerca de mi" />
+              <input type="text" name="nombre" placeholder="Nombre" id="name" />
+              <input
+                type="text"
+                name="about"
+                placeholder="Acerca de mi"
+                id="characteristic"
+              />
             </div>
             <input type="submit" class="btn-submit" value="Guardar" />
           </form>
@@ -115,5 +116,6 @@
       </div>
       <p class="footer">© 2024 Nikole Ruiz Flores</p>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
