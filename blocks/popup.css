@@ -1,0 +1,67 @@
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+.overlay.active {
+  visibility: visible;
+}
+.popup {
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-family: "Inter";
+  text-align: left;
+  padding: 20px;
+  width: 430px;
+  height: 330px;
+  margin-top: 195px;
+  position: relative;
+}
+.btn-cerrar-popup {
+  position: absolute;
+  top: 164px;
+  right: 370px;
+  background: none;
+  color: #ffffff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: none;
+}
+h3 {
+  font-size: 2em;
+  margin-left: 36px;
+  margin-top: 34px;
+}
+.contenedor-inputs input {
+  width: calc(100% - 30px);
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-top-style: unset;
+  border-left-style: unset;
+  border-right-style: unset;
+  border-bottom-color: #a7a7a7;
+  padding: 10px;
+}
+.btn-submit {
+  height: 50px;
+  line-height: 21px;
+  width: 350px;
+  border: none;
+  background-color: rgb(7, 4, 4);
+  color: #fff;
+  cursor: pointer;
+  margin-right: 36px;
+  margin-left: 36px;
+  margin-top: 45px;
+}
+.btn-submit:hover {
+  background-color: #3d3d3d;
+}
