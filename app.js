@@ -18,11 +18,13 @@ const EditarPerfil = document.forms["registrer"];
 const inputNombre = EditarPerfil.elements["name"];
 const inputCharacteristic = EditarPerfil.elements["about"];
 const h2Person = document.getElementById("profile__name");
-const pDescription = document.querySelector(".profile_description");
+const pDescription = document.querySelector(".profile__description");
 
 EditarPerfil.addEventListener("submit", function (event) {
-  event.preventDefaul();
+  event.preventDefault();
 
   const nuevoNombre = inputNombre.value.trim();
   const nuevaCaracteristica = inputCharacteristic.value.trim();
+  h2Person.textContent = nuevoNombre;
+  pDescription.textContent = nuevaCaracteristica;
 });
