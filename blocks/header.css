@@ -1,11 +1,10 @@
-.header {
-  color: white;
+.header__container {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #545454;
 }
 .header__title {
-  display: flex;
-  font-size: 4em;
-}
-.header__title-small {
-  font-size: 1rem;
-  color: white;
+  margin-bottom: 41px;
+  margin-top: 45px;
 }

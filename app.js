@@ -2,17 +2,16 @@
 const btnAbrirPopup = document.querySelector("#btn-abrir-popup");
 const overlay = document.querySelector("#overlay");
 const Popup = document.querySelector("#popup");
-const btnCerrarPopup = document.querySelector("#btn-cerrar-popup");
+const btnCerrarPopup = document.querySelector(".popup__close");
 
-btnAbrirPopup.addEventListener("click", function () {
-  overlay.classList.add("active");
-  Popup.classList.add("active");
-});
+function popupToggle() {
+  overlay.classList.toggle("active");
+  Popup.classList.toggle("active");
+}
 
-btnCerrarPopup.addEventListener("click", function () {
-  overlay.classList.remove("active");
-  Popup.classList.remove("active");
-});
+btnAbrirPopup.addEventListener("click", popupToggle);
+
+btnCerrarPopup.addEventListener("click", popupToggle);
 
 const EditarPerfil = document.forms["registrer"];
 const inputNombre = EditarPerfil.elements["name"];
@@ -27,4 +26,5 @@ EditarPerfil.addEventListener("submit", function (event) {
   const nuevaCaracteristica = inputCharacteristic.value.trim();
   h2Person.textContent = nuevoNombre;
   pDescription.textContent = nuevaCaracteristica;
+  popupToggle();
 });

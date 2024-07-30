@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +12,9 @@
   <body>
     <div class="page">
       <header class="header">
-        <h1 class="header__title">
-          Around<span class="header__title-small">The U.S</span>
-        </h1>
+        <div class="header__container">
+          <img src="./images/around.svg" class="header__title" />
+        </div>
       </header>
       <div class="profile">
         <img src="./niko.jpeg" alt="foto de una mujer" class="profile__image" />
@@ -30,17 +30,28 @@
         <button class="profile__button-add">+</button>
       </div>
       <div class="overlay" id="overlay">
-        <button id="btn-cerrar-popup" class="btn-cerrar-popup">x</button>
-        <div class="popup" edit="popup">
-          <h3>Editar perfil</h3>
+        <div class="popup" id="popup">
+          <h3 class="popup__title">Editar perfil</h3>
           <form class="popup__container" id="registrer">
+            <img
+              src="./images/Close Icon.svg"
+              class="popup__close"
+              id="popup__close"
+            />
             <div class="contenedor-inputs">
-              <input type="text" name="nombre" placeholder="Nombre" id="name" />
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre"
+                id="name"
+                class="popup__input-name"
+              />
               <input
                 type="text"
                 name="about"
                 placeholder="Acerca de mi"
                 id="characteristic"
+                class="popup__input-about"
               />
             </div>
             <button type="submit" class="btn-submit" value="Guardar">
@@ -52,69 +63,98 @@
 
       <div class="card">
         <div class="element">
-          <img
-            src="./images/kirill-pershin-1088404-unsplash.jpg"
-            alt="foto del valle de yosemite"
-            class="photo"
-          />
+          <div class="element__container">
+            <img
+              src="./images/kirill-pershin-1088404-unsplash.jpg"
+              alt="foto del valle de yosemite"
+              class="photo"
+            />
+          </div>
           <div class="element__info">
             <h2 class="element__title">Valle de Yosemine</h2>
-            <button class="element__like"><span>&#x2661;</span></button>
+            <button class="element__like">
+              <img src="./images/heart.svg" class="element__heart" />
+            </button>
           </div>
         </div>
         <div class="element">
-          <img
-            src="./images/element2.jpg"
-            alt="foto del lago Louise"
-            class="photo"
-          />
+          <div class="element__container">
+            <img
+              src="./images/element2.jpg"
+              alt="foto del lago Louise"
+              class="photo"
+            />
+          </div>
+
           <div class="element__info">
             <h2 class="element__title">Lago Louise</h2>
-            <button class="element__like"><span>&#x2661;</span></button>
+            <button class="element__like">
+              <img src="./images/heart.svg" class="element__heart" />
+            </button>
           </div>
         </div>
         <div class="element">
-          <img
-            src="./images/element3.jpg"
-            alt="foto de Montañas Calvas"
-            class="photo"
-          />
+          <div class="element__container">
+            <img
+              src="./images/element3.jpg"
+              alt="foto de Montañas Calvas"
+              class="photo"
+            />
+          </div>
+
           <div class="element__info">
             <h2 class="element__title">Montañas Calvas</h2>
-            <button class="element__like">&#x2661;</button>
+            <button class="element__like">
+              <img src="./images/heart.svg" class="element__heart" />
+            </button>
           </div>
         </div>
         <div class="element">
-          <img
-            src="./images/element4.jpg"
-            alt="foto de Latemar"
-            class="photo"
-          />
+          <div class="element__container">
+            <img
+              src="./images/element4.jpg"
+              alt="foto de Latemar"
+              class="photo"
+            />
+          </div>
+
           <div class="element__info">
             <h2 class="element__title">Latemar</h2>
-            <button class="element__like">&#x2661;</button>
+            <button class="element__like">
+              <img src="./images/heart.svg" class="element__heart" />
+            </button>
           </div>
         </div>
         <div class="element">
-          <img
-            src="./images/element5.jpg"
-            alt="foto Vanois National"
-            class="photo"
-          />
+          <div class="element__container">
+            <img
+              src="./images/element5.jpg"
+              alt="foto Vanois National"
+              class="photo"
+            />
+          </div>
+
           <div class="element__info">
             <h2 class="element__title">Vanois National...</h2>
-            <button class="element__like">&#x2661;</button>
+            <button class="element__like">
+              <img src="./images/heart.svg" class="element__heart" />
+            </button>
           </div>
         </div>
         <div class="element">
-          <img
-            src="./images/element6.jpg"
-            alt="foto Lago di Braies"
-            class="photo"
-          />
+          <div class="element__container">
+            <img
+              src="./images/element6.jpg"
+              alt="foto Lago di Braies"
+              class="photo"
+            />
+          </div>
+
           <div class="element__info">
             <h2 class="element__title">Lago di Braies</h2>
-            <button class="element__like">&#x2661;</button>
+            <button class="element__like">
+              <img src="./images/heart.svg" class="element__heart" />
+            </button>
           </div>
         </div>
       </div>
