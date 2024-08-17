@@ -27,8 +27,9 @@
           </div>
           <p class="profile__description">Explorador</p>
         </div>
-        <button class="profile__button-add">+</button>
+        <button class="profile__button-add" id="btn-abrir-card">+</button>
       </div>
+
       <div class="overlay" id="overlay">
         <div class="popup" id="popup">
           <h3 class="popup__title">Editar perfil</h3>
@@ -61,9 +62,66 @@
         </div>
       </div>
 
-      <div class="card">
+      <!--copy new form//copiar nuevo formulario-->
+
+      <div class="overlay" id="overlay-cards">
+        <div class="popup" id="popup-cards">
+          <h3 class="popup__title">New Place</h3>
+          <form class="popup__container" id="places">
+            <img
+              src="./images/Close Icon.svg"
+              class="popup__close"
+              id="cards__close"
+            />
+            <div class="contenedor-inputs">
+              <input
+                type="text"
+                name="title"
+                placeholder="Titulo"
+                id="input-card-title"
+                class="popup__input"
+              />
+              <input
+                type="text"
+                name="link"
+                placeholder="Image URL"
+                id="input-card-link"
+                class="popup__input"
+              />
+            </div>
+            <button type="submit" class="btn-submit" value="Guardar">
+              Crear
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!--ventana emergente para la carta-->
+
+      <div class="modal" id="modal-image">
+        <div class="modal__container">
+          <img
+            src="./images/Close Icon.svg"
+            class="popup__close"
+            id="modal__close"
+          />
+          <img src="" alt="" class="modal__image-src" />
+          <h3 class="modal__image-title"></h3>
+        </div>
+      </div>
+
+      <!--create letter through template//crear Cards a traves de Template-->
+
+      <div class="card__area" id="card__area"></div>
+      <template id="card-template">
         <div class="element">
           <div class="element__container">
+            <img
+              src="./images/element__trash.png"
+              alt="trush"
+              class="element__delete-icon"
+              id="delete-trash"
+            />
             <img
               src="./images/kirill-pershin-1088404-unsplash.jpg"
               alt="foto del valle de yosemite"
@@ -77,87 +135,8 @@
             </button>
           </div>
         </div>
-        <div class="element">
-          <div class="element__container">
-            <img
-              src="./images/element2.jpg"
-              alt="foto del lago Louise"
-              class="photo"
-            />
-          </div>
+      </template>
 
-          <div class="element__info">
-            <h2 class="element__title">Lago Louise</h2>
-            <button class="element__like">
-              <img src="./images/heart.svg" class="element__heart" />
-            </button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__container">
-            <img
-              src="./images/element3.jpg"
-              alt="foto de Montañas Calvas"
-              class="photo"
-            />
-          </div>
-
-          <div class="element__info">
-            <h2 class="element__title">Montañas Calvas</h2>
-            <button class="element__like">
-              <img src="./images/heart.svg" class="element__heart" />
-            </button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__container">
-            <img
-              src="./images/element4.jpg"
-              alt="foto de Latemar"
-              class="photo"
-            />
-          </div>
-
-          <div class="element__info">
-            <h2 class="element__title">Latemar</h2>
-            <button class="element__like">
-              <img src="./images/heart.svg" class="element__heart" />
-            </button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__container">
-            <img
-              src="./images/element5.jpg"
-              alt="foto Vanois National"
-              class="photo"
-            />
-          </div>
-
-          <div class="element__info">
-            <h2 class="element__title">Vanois National...</h2>
-            <button class="element__like">
-              <img src="./images/heart.svg" class="element__heart" />
-            </button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__container">
-            <img
-              src="./images/element6.jpg"
-              alt="foto Lago di Braies"
-              class="photo"
-            />
-          </div>
-
-          <div class="element__info">
-            <h2 class="element__title">Lago di Braies</h2>
-            <button class="element__like">
-              <img src="./images/heart.svg" class="element__heart" />
-            </button>
-          </div>
-        </div>
-      </div>
       <p class="footer">© 2024 Nikole Ruiz Flores</p>
     </div>
     <script src="app.js"></script>
