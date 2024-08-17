@@ -59,13 +59,15 @@
 .profile__button-add:hover {
   opacity: 0.5;
 }
-@media screen and (max-width: 320px) {
+
+@media screen and (max-width: 500px) {
   .profile {
     display: flex;
     flex-direction: column;
   }
   .profile__image {
     margin: auto;
+    margin-top: 42px;
   }
   .profile__info {
     margin: auto;
@@ -84,7 +86,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .card {
+  .card__area {
     display: flex;
     flex-direction: column;
     margin: auto;

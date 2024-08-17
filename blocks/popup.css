@@ -116,7 +116,7 @@
 .modal_opened {
   display: flex;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .popup {
     padding: 0px;
     max-width: 282px;

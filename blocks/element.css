@@ -66,8 +66,8 @@
 }
 
 .element__delete-icon {
-  width: 19px;
-  height: 19px;
+  width: 1.3rem;
+  height: 1.3rem;
   right: 20px;
   top: 15px;
   position: absolute;
@@ -77,4 +77,15 @@
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .element {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .element__delete-icon {
+    right: 20px;
+    top: 20px;
+  }
 }
