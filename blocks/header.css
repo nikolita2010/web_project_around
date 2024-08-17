@@ -8,6 +8,12 @@
   margin-bottom: 41px;
   margin-top: 45px;
 }
+@media screen and (max-width: 857px) {
+  .header__title {
+    display: flex;
+    margin-left: 28px;
+  }
+}
 @media screen and (max-width: 500px) {
   .header__title {
     display: flex;

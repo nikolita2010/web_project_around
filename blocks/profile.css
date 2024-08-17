@@ -59,6 +59,34 @@
 .profile__button-add:hover {
   opacity: 0.5;
 }
+@media screen and (max-width: 857px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile__image {
+    margin: auto;
+    margin-top: 42px;
+  }
+  .profile__info {
+    margin: auto;
+  }
+  .profile__name {
+    font-size: 22px;
+  }
+  .profile__description {
+    font-size: 14px;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  .profile__button-add {
+    width: 282px;
+    max-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .profile {
