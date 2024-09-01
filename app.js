@@ -98,6 +98,7 @@ function PopupCardsToggle() {
 }
 
 btnAbrirCards.addEventListener("click", PopupCardsToggle);
+
 btnCerrarCards.addEventListener("click", PopupCardsToggle);
 
 NewPlace.addEventListener("submit", function (event) {
@@ -111,5 +112,25 @@ function openPopupImageToggle(title, link) {
   PopupImage.classList.toggle("modal_opened");
   PopupImageTitle.textContent = title;
   PopupImageSrc.src = link;
+  document.removeEventListener("keydown", closeOnEsc);
 }
 btnCerrarModal.addEventListener("click", openPopupImageToggle);
+
+const closeOnEsc = (event) => {
+  if (event.key === "Escape") {
+    btnCerrarCards();
+    btnCerrarModal();
+    btnCerrarPopup();
+  }
+};
+
+document.addEventListener("keydown", closeOnEsc);
+document.removeEventListener("keydown", closeOnEsc);
+
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("popup__opened")) {
+    btnCerrarCards();
+    btnCerrarModal();
+    btnCerrarPopup();
+  }
+});

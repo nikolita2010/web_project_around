@@ -43,17 +43,23 @@
               <input
                 type="text"
                 name="nombre"
+                minlength="2"
+                maxlength="40"
                 placeholder="Nombre"
                 id="name"
-                class="popup__input-name"
+                class="popup__input"
               />
+              <span class="popup__input-error name-error"></span>
               <input
                 type="text"
                 name="about"
+                minlength="2"
+                maxlength="200"
                 placeholder="Acerca de mi"
                 id="characteristic"
-                class="popup__input-about"
+                class="popup__input"
               />
+              <span class="popup__input-error characteristic-error"></span>
             </div>
             <button type="submit" class="btn-submit" value="Guardar">
               Guardar
@@ -77,17 +83,22 @@
               <input
                 type="text"
                 name="title"
+                minlength="2"
+                maxlength="40"
                 placeholder="Titulo"
                 id="input-card-title"
                 class="popup__input"
               />
+              <span class="popup__input-error input-card-title-error"></span>
               <input
-                type="text"
+                type="url"
                 name="link"
+                required
                 placeholder="Image URL"
                 id="input-card-link"
                 class="popup__input"
               />
+              <span class="popup__input-error input-card-link-error"></span>
             </div>
             <button type="submit" class="btn-submit" value="Guardar">
               Crear
@@ -140,5 +151,6 @@
       <p class="footer">&copy 2024 Nikole Ruiz Flores</p>
     </div>
     <script src="app.js"></script>
+    <script src="validation.js"></script>
   </body>
 </html>
