@@ -76,7 +76,6 @@ initialCards.forEach(function (item) {
 
 function popupToggle() {
   overlay.classList.toggle("active");
-  Popup.classList.toggle("active");
 }
 
 btnAbrirPopup.addEventListener("click", popupToggle);
@@ -112,24 +111,25 @@ function openPopupImageToggle(title, link) {
   PopupImage.classList.toggle("modal_opened");
   PopupImageTitle.textContent = title;
   PopupImageSrc.src = link;
-  document.removeEventListener("keydown", closeOnEsc);
 }
 btnCerrarModal.addEventListener("click", openPopupImageToggle);
 
 const closeOnEsc = (event) => {
   if (event.key === "Escape") {
     if (document.querySelector("#overlay").classList.contains("active")) {
-      console.log("funcion cerrar Editar");
+      console.log("funciona cerrar Editar");
       document.querySelector("#overlay").classList.remove("active");
     }
+
     if (document.querySelector("#overlay-cards").classList.contains("active")) {
-      console.log("funcion cerrar Cards");
+      console.log("funciona cerrar Add Place");
       document.querySelector("#overlay-cards").classList.remove("active");
     }
+
     if (
       document.querySelector("#modal-image").classList.contains("modal_opened")
     ) {
-      console.log("funcion cerrar modal");
+      console.log("funciona cerrar modal");
       document.querySelector("#modal-image").classList.remove("modal_opened");
     }
   }
@@ -139,10 +139,11 @@ document.addEventListener("keydown", closeOnEsc);
 
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("active")) {
-    document.querySelector("#overlay").classList.remove("active");
     document.querySelector("#overlay-cards").classList.remove("active");
+    document.querySelector("#overlay").classList.remove("active");
     console.log("funciona cerrar Editar o Añadir lugar con dar click afuera");
   }
+
   if (event.target.classList.contains("modal_opened")) {
     document.querySelector("#modal-image").classList.remove("modal_opened");
     console.log("funciona cerrar modal con dar click afuera");
